@@ -17,7 +17,7 @@ class Encoder(nn.Module):
         self.sec_list = xformer.sector_list
         self.s_qkv = xformer.s_qkv
 
-        self.context_embedding = EmbeddingGenerator(self.embedding_size_time, self.embedding_size_variable,self.embedding_size_sector, self.input_size, self.src_seq_length)
+        self.context_embedding = EmbeddingGenerator(self.embedding_size_time, self.embedding_size_variable, self.embedding_size_sector, self.input_size, self.src_seq_length)
         # Layer Norm  (in: (N_w x M) out: (N_w x M))
         self.norm1 = nn.BatchNorm1d(self.embedding_size)
         # Self-Attention Layer Local (in: (N_w x M) out: (N_w x M))

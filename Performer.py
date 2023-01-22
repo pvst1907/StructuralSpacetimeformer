@@ -2,6 +2,7 @@ import torch.nn as nn
 import torch
 import numpy as np
 
+
 class Performer(nn.Module):
     def _init_(self):
         super()._init_()
